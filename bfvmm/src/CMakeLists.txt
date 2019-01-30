@@ -20,7 +20,7 @@
 # SOFTWARE.
 
 cmake_minimum_required(VERSION 3.6)
-project(boxy C CXX)
+project(boxy_bfvmm C CXX)
 
 include(${SOURCE_CMAKE_DIR}/project.cmake)
 init_project(

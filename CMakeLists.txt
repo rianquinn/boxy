@@ -38,6 +38,22 @@ include(${BOXY_SOURCE_CMAKE_DIR}/targets.cmake)
 include_dependency(BOXY_SOURCE_DEPENDS_DIR linux)
 
 # ------------------------------------------------------------------------------
+# SDK
+# ------------------------------------------------------------------------------
+
+if(ENABLE_BUILD_TEST)
+    add_subproject(
+        boxy_bfsdk test
+        DEPENDS gsl
+        DEPENDS json
+        DEPENDS catch
+        DEPENDS hippomocks
+        DEPENDS bfvmm
+        SOURCE_DIR ${CMAKE_CURRENT_LIST_DIR}/bfsdk/tests
+    )
+endif()
+
+# ------------------------------------------------------------------------------
 # VMM
 # ------------------------------------------------------------------------------
 
